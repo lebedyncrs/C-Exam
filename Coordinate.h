@@ -18,7 +18,8 @@ class Coordinate {
 public:
     int x;
     int y;
-
+    Coordinate(int x, int y);
+    Coordinate();
 };
 
 #endif /* COORDINATE_H */

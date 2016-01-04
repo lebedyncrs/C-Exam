@@ -11,10 +11,12 @@
 
 class City {
 public:
+    // current index the object in array
     int index;
     int nextCityIndex;
     Coordinate *coordinate;
-    int isVisited;
+    // flag shows whether city is visited
+    bool isVisited = 0;
 
 };
 

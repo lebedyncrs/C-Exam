@@ -3,6 +3,7 @@
 #include "City.h"
 #include "Coordinate.h"
 #include "CoordinateCalculator.h"
+#include "DataFaker.h"
 
 
 using namespace std;
@@ -120,6 +121,8 @@ int main() {
 
     CoordinateCalculator *calc = new CoordinateCalculator(cities, 3);
    
+    DataFaker *faker = new DataFaker;
+    cout<<faker->generateCities(2);
 
 }
 
