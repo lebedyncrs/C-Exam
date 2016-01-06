@@ -103,26 +103,32 @@ int main() {
     //    calculator = new Calculator(count);
     //
     //    calculator->CalculateLength(cities);
-    Coordinate *coordinates = new Coordinate[3];
-    City *cities = new City[3];
-
-    coordinates[0].x = 11;
-    coordinates[0].y = 11;
-
-    coordinates[1].x = 22;
-    coordinates[1].y = 22;
-
-    coordinates[2].x = 33;
-    coordinates[2].y = 33;
-
-    cities[0].coordinate = &coordinates[0];
-    cities[1].coordinate = &coordinates[1];
-    cities[2].coordinate = &coordinates[2];
-
-    CoordinateCalculator *calc = new CoordinateCalculator(cities, 3);
-   
+    //    Coordinate *coordinates = new Coordinate[3];
+    //    City *cities = new City[3];
+    //
+    //    coordinates[0].x = 11;
+    //    coordinates[0].y = 11;
+    //
+    //    coordinates[1].x = 22;
+    //    coordinates[1].y = 22;
+    //
+    //    coordinates[2].x = 33;
+    //    coordinates[2].y = 33;
+    //
+    //    cities[0].coordinate = &coordinates[0];
+    //    cities[1].coordinate = &coordinates[1];
+    //    cities[2].coordinate = &coordinates[2];
+    //
+    //    CoordinateCalculator *calc = new CoordinateCalculator(cities, 3);
+    int cityCount = 10;
     DataFaker *faker = new DataFaker;
-    cout<<faker->generateCities(2);
+    faker->generateCities(cityCount);
 
+    CoordinateCalculator *calculator = new CoordinateCalculator(faker->cities, cityCount);
+    calculator->searchNextCity();
+//
+    for (int i = 0; i < cityCount; i++) {
+        cout << faker->cities[i].nextCityIndex << endl;
+    }
 }
 

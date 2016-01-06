@@ -15,6 +15,7 @@
 
 class DataFaker {
 public:
+    City *cities;
     generateCities(int count);
     Coordinate* generateCoordinate();
 };

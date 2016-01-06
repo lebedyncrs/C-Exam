@@ -24,6 +24,8 @@ public:
      * @return float distance between two cities
      */
     float getDistanceBetwenTwoCity(int firstIndex, int secondIndex);
+    searchNextCity();
+    int getNearestCity(int cityIndex);
 };
 
 #endif /* COORDINATECALCULATOR_H */
